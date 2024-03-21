@@ -1,0 +1,33 @@
+# Autores
+type Author{
+    ida: ID!
+    name: String!
+    nationality: String!
+}
+
+# Libros
+
+type Book{
+    idb: ID!
+    title: String!
+    author: String!
+    ISBN: String!
+    releaseDate: String!
+}
+
+# Prestamos
+
+type Loan{
+    idl: ID!
+    book: String!
+    user: String!
+    loanDate: String!
+    returnDate: String!
+}
+
+type Query{
+    allAuthors: [Author!]!
+    allBooks: [Book!]!
+    allLoans: [Loan!]!
+    idBook(idb: ID!): Book! 
+}
